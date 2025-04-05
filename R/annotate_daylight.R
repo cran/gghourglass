@@ -17,60 +17,75 @@ AnnotateDaylight <-
       axis_scale <- panel_params[[orientation]]$scale
       day        <- 60*60*24
       xsc        <- axis_scale$trans$inverse(panel_params[[orientation]]$continuous_range)
+      if (uses_dst(xsc)) {
+        rlang::warn(
+          c(
+            x = paste0("You are displaying a timezone that uses daylight saving time.\n",
+                       "It may contain ambiguous time stamps."),
+            i = paste0("Convert the object to a time zone without daylight time (e.g. 'UTC').\n",
+                       "You can use `lubridate::with_tz()`.")
+          )
+        )
+      }
       sun        <- seq(get_date(xsc[1] - 3*day),
                         get_date(xsc[2] + 3*day), by = day)
+
       sun <-
         suncalc::getSunlightTimes(
           data = data.frame(date = as.Date(sun),
                             lon = data$longitude[[1]], lat = data$latitude[[1]]),
           keep = data$sun_prop[[1]]
         ) |>
-        dplyr::rename_with(~c("prop1", "prop2")[seq_along(data$sun_prop[[1]])],
+        dplyr::rename_with(~c("prop1", "prop2"),
                            data$sun_prop[[1]]) |>
-        dplyr::select(dplyr::any_of(c("prop1", "prop2"))) |>
+        dplyr::select(dplyr::any_of(c("date", "prop1", "prop2"))) |>
         dplyr::mutate(
+          date = {
+            date <- .data$date
+            lubridate::tz(date) <- lubridate::tz(xsc)
+            date
+          },
           dplyr::across(
-            dplyr::starts_with("prop"),
-            \(x) {
-              lubridate::with_tz(x, lubridate::tz(xsc)) |>
-                get_hour() |>
-                as.numeric()
-            },
-            .names = "hour_{.col}"
-          ),
-          dplyr::across(
-            dplyr::starts_with("prop"),
-            get_date,
-            .names = "date_{.col}"
+            dplyr::starts_with("prop"), \(x) {
+              get_hour(lubridate::with_tz(x, lubridate::tz(xsc)))
+            }
           )
-        )
+        ) |>
+        dplyr::mutate(
+          prop2 = if(any(.data$prop2 < .data$prop1))
+            dplyr::lead(.data$prop2, 1L) + lubridate::as.period(1, "day") else
+              .data$prop2
+        ) |>
+        dplyr::filter(!is.na(.data$prop2))
+      
       sun <- dplyr::bind_rows(
-        sun |> dplyr::select(dplyr::contains("prop1")) |>
-          dplyr::rename_with(~gsub("1", "", .)),
-        sun |> dplyr::select(dplyr::contains("prop2")) |>
-          dplyr::rename_with(~gsub("2", "", .)) |>
+        sun |> dplyr::select("date", prop = "prop1"),
+        sun |> dplyr::select("date", prop = "prop2") |>
           dplyr::arrange(dplyr::desc(dplyr::row_number()))
       ) |>
+        dplyr::transmute(
+          x = axis_scale$trans$transform(lubridate::as_datetime(.data$date)),
+          y = panel_params[[orientation]]$scale$trans$transform(
+            lubridate::as_datetime(.data$prop))
+        ) |>
         dplyr::filter(
-          duplicated(.data$date_prop, fromLast = TRUE) |
-            duplicated(.data$date_prop, fromLast = FALSE)
+          duplicated(.data$x, fromLast = TRUE) |
+            duplicated(.data$x, fromLast = FALSE)
         )
       sun2 <- sun
-      if (min(sun$hour_prop, na.rm = TRUE) < min(panel_params[[opposite]]$continuous_range,
+      if (max(sun$y, na.rm = TRUE) > max(panel_params[[opposite]]$continuous_range,
                                                  na.rm = TRUE)) {
-        sun2$hour_prop <- sun2$hour_prop + day
-        sun2$date_prop <- sun2$date_prop - day
+        sun2$y <- sun2$y - day
+        sun2$x <- sun2$x + day
       } else {
-        sun2$hour_prop <- sun2$hour_prop - day
-        sun2$date_prop <- sun2$date_prop + day
+        sun2$y <- sun2$y + day
+        sun2$x <- sun2$x - day
       }
       sun <-
         sun |> dplyr::mutate(pos = "A") |>
         dplyr::bind_rows(
           sun2 |> dplyr::mutate(pos = "B")
-        ) |>
-        dplyr::select(x = "date_prop", y = "hour_prop", pos) |>
-        dplyr::mutate(x =  axis_scale$trans$transform(x))
+        )
       if (orientation == "y") {
         names(sun)[match(c("x", "y"), names(sun))] <- c("y", "x")
       }
@@ -133,7 +148,7 @@ AnnotateDaylight <-
 #' 
 #' ggplot(subset(bats, format(RECDATETIME, "%Y") == "2018"),
 #'        aes(x = RECDATETIME, col = SPECDESCSCI)) +
-#'   annotate_daylight(monitoring$longitude[1], monitoring$latitude[1]) +
+#'   annotate_daylight(monitoring$longitude[1], monitoring$latitude[1], c("sunset", "sunrise")) +
 #'   annotate_daylight(monitoring$longitude[1], monitoring$latitude[1], c("dusk", "dawn")) +
 #'   geom_hourglass()
 #' @export

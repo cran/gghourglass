@@ -1,6 +1,6 @@
 Package: gghourglass
 Title: Plot Records per Time of Day
-Version: 0.0.1
+Version: 0.0.2
 Authors@R: c(person("Pepijn", "de Vries", role = c("aut", "cre"),
     email = "pepijn.devries@outlook.com",
     comment = c(ORCID = "0000-0002-7961-6646")),
@@ -12,21 +12,25 @@ Description: Splits date and time of day components from
     continuous 'datetime' objects, then plots them using grammar
     of graphics ('ggplot2'). Plots can also be decorated with
     solar cycle information (e.g., sunset, sunrise, etc.).
-    This is useful for data that are associated with the
-    solar cycle.
+    This is useful for visualising data that are associated with
+    the solar cycle.
 Depends: R (>= 4.1.0)
-Imports: dplyr (>= 1.1.4), ggplot2 (>= 3.4.4), lubridate (>= 1.9.3),
-        rlang (>= 1.1.2), suncalc (>= 0.5.1)
-Suggests: readr (>= 2.1.4), testthat (>= 3.0.0), usethis (>= 2.2.2),
-        vdiffr
+Imports: dplyr (>= 1.1.4), ggplot2 (>= 3.4.4), grid (>= 4.1.0),
+        lubridate (>= 1.9.3), rlang (>= 1.1.2), suncalc (>= 0.5.1),
+        tidyr (>= 1.3.0)
+Suggests: knitr, readr (>= 2.1.4), rmarkdown, testthat (>= 3.0.0),
+        usethis (>= 2.2.2), vdiffr
 License: GPL (>= 3)
 Encoding: UTF-8
 RoxygenNote: 7.2.3
 LazyData: true
+VignetteBuilder: knitr
 Config/testthat/edition: 3
-URL: https://pepijn-devries.github.io/gghourglass/
+URL: https://pepijn-devries.github.io/gghourglass/,
+        https://github.com/pepijn-devries/gghourglass
+BugReports: https://github.com/pepijn-devries/gghourglass/issues
 NeedsCompilation: no
-Packaged: 2025-03-24 14:00:08 UTC; vries171
+Packaged: 2025-04-05 12:34:36 UTC; vries171
 Maintainer: Pepijn de Vries <pepijn.devries@outlook.com>
 Repository: CRAN
-Date/Publication: 2025-03-25 09:30:02 UTC
+Date/Publication: 2025-04-05 14:20:02 UTC

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>From dusk till dawn</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">From dusk till dawn</h1>
+
+
+
+<blockquote>
+<p>This vignette presents some vital aspects of decorating your plot
+with solar cylce information</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="do">## load required namespaces for this vignette</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(gghourglass)</span></code></pre></div>
+<p>With <code>annotate_daylight()</code> you can add ribbons to your
+plot reflecting the solar cycle. By default, it marks the time between
+sunset and sunrise:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="do">## get example data</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">data</span>(bats)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="do">## subset example date to the year 2018</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>bats_sub <span class="ot">&lt;-</span> <span class="fu">subset</span>(bats, <span class="fu">format</span>(RECDATETIME, <span class="st">&quot;%Y&quot;</span>) <span class="sc">==</span> <span class="st">&quot;2019&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="do">## retrieve monitoring location</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>lon <span class="ot">&lt;-</span> <span class="fu">attr</span>(bats, <span class="st">&quot;monitoring&quot;</span>)<span class="sc">$</span>longitude[<span class="dv">1</span>]</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>lat <span class="ot">&lt;-</span> <span class="fu">attr</span>(bats, <span class="st">&quot;monitoring&quot;</span>)<span class="sc">$</span>latitude[<span class="dv">1</span>]</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="do">## plot the data</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(bats_sub, <span class="fu">aes</span>(<span class="at">x =</span> RECDATETIME)) <span class="sc">+</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>    <span class="do">## add hourglass geometry to plot</span></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="fu">geom_hourglass</span>() <span class="sc">+</span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  </span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>    <span class="do">## add informative labels</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Date&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Time of day&quot;</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="do">## decorate the plot with night time ribbon</span></span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">annotate_daylight</span>(lon, lat, <span class="fu">c</span>(<span class="st">&quot;sunset&quot;</span>, <span class="st">&quot;sunrise&quot;</span>), <span class="at">fill =</span> <span class="st">&quot;darkblue&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>The order in which you include the solar events matter. In the
+example above, the time between sunset and sunrise (i.e., night time) is
+marked with a dark blue ribbon. But if you reverse the order, it will
+mark the day time:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">annotate_daylight</span>(lon, lat, <span class="fu">c</span>(<span class="st">&quot;sunrise&quot;</span>, <span class="st">&quot;sunset&quot;</span>), <span class="at">fill =</span> <span class="st">&quot;orange&quot;</span>)</span></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAEgCAMAAABcujGyAAAA0lBMVEUAAAAAADoAAGYAOpAAZrYZEAA6AAA6ADo6AGY6kNtNTU1NTW5NTY5NbqtNjshmAABmtv9uTU1uTW5uTY5ubo5ubqtuq6tuq+SOTU2OTW6OTY6Obk2ObquOjm6Ojo6OyP+QOgCQ27aQ2/+rbk2rbm6rbo6rjk2rq26ryKur5Mir5P+zs7O2ZgC22/+2///Ijk3I5KvI///bkDrb/7bb///e3t7h2Mjkq27k5Kvk////tmb/yI7/25D/27b/29v/5Kv/9ub//7b//8j//9v//+T///+zaqTcAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAPgklEQVR4nO2daWMTuxWGBwi3jdmSSylLb+sUupGbkpICKYTWkDD//y91pBnb43gWaaRzdHTmfT4kwSR5LemJltlUlAAIpkj9BgAYAoIC0UBQIBoICkQDQYFoICgQTaigvwJAQixBvw3zaeT/Y6M9L0FimkAImmceBIWgovMgKAQVnQdBIajoPAgKQUXnQVAIKjoPgkJQ0XkQVKqg9+/fd/k2CKokMDdB7993MxSCKgmEoHGAoESBEDQOEJQoMJqgn5io/OSKUk4eNZlbD+qK9rzwRNexKFqgN1kO8a5oz4OgEFR0HgSFoKLzIiR6+plCUCMWBM0yT/8qviw/lhA02zzVgjZOQdCM87QK2nYKgmacp1DQPacgaMZ5igTtdQqCZpynQ9BhpyBoxnn5CzruFATNOC9rQR2dgqAZ5+UqqI9TEDTjvAwF9XYKgmacl5eg05yCoBnnZSNogFMQNOO8HAQNVAqC5pwnXNBAm2ogaMZ5UgUN1GgHV0GvXywefS7LH28WD07bLzSfIGiKPIGCxnTTR9Afb5bl5eOyPF+WV1bI5oX16xA0RZ4sQaO76SPo9av35erpe/Opovlq+wmCJskTIyiNmz6Crp59Lq9fnq6e/a0Z4jcv2E9l83z61LenAnY+cjAuqBnXjY/HS6vm5oXmU/Nd6EG5SdiDBvaMrvj2oGsf915ofo9j6XjQnpdKUFold/Gcg/6y9rF7Dmo+jJWOEe15CRI/UsrYhfMq/vl6FV8P8c0L69drft18f3fptAujW9CtL5x4HgetPj2s+8zO46C7P5O0OueQx5O47wsncc8k7b3CX51zykt1DxsnxIIa+KrzNtrzSBMHfOGEQVALdXV2oj0v1T1snHAJWhpHtQuTu6CuvnDCKKgNi1qhY0BQZ1ybWL2grIpC0HE8m3gGgloitI0DEHSQKU2sVdCiKMq90sVqpV4gaB+Tm1ipoEVhDd0vXdTW2gOC7hHYwrMT1EDRcDUQtE1g49bMUVBL8ubLMc85MbBdWygVtHsOukei5ss2L9UtQrGp7RgI5F/F98LafLERJWhgW05vQm+a8XUgUJCgFobmI0GKoIHNGKMJfchPUAtZ89EhQNCA1rtNpzUQdJfIzUdMQkGnNdgQ3dpA0NtEaT4m0gg6paUcUCko1W2nqe+tFQtVhVdYbQh//27U8DdI7kG3TOtfOOHLi1Ojg/D1oIOIH+Jv4dWMKgWNXaN9QNDpuLalNkF9anTo4LcbbKv4QbIU1CJAGLY8/xodXHi4AUEjkEgYxryJNRouKIb4WPAKM0TkPIeyKxK05/0qENTCIcwosfLci004B2UWtO8vSougFiphXImQ51liyhrlnYPOQtA1EYXxIiBvYknTTAkpmJWgljBhJjElL6yQENQLUYI2edEtHMBT0EglZAWCxqSVR2PkLVwFJSkhDxA0Jh15CQVlKiEtOMwUk/48TkHTlFBV4PwE3UImKHnpDBDUixwFbRMqKHvraRIUQ/xUulSkzPNBj6CZL5KmnbjL8w9CdCIE7WTipQ8QNJ/AUEGb3TyuFmaXj9YLQ7t8dIdNAYJKSZQqaLOrsdl/pt4WqXu345E3AUGzT5Qj6Pcnd15v/9XaUa761Lvb8cibwBw0+0RJq/izorj3ofm6tSdn3WF273bMc5cqmBt9Q/z3J0VxaL/a7Gq8Oq634+7e7Xjkj0R7j4YelCiwfw5qFL37bqcHHd7teDyMEe15DIm3B15JQ3xZXhTFQTXUVwN9e655viyHdjseQLsw+gTdW7rIWSSVNydFcWS++FJ1oc2uxtsRfWS34260C6NLUCOMYEG/PzFD+4bmeOflYlHNQR13O+4OY0R7Hv2TRQQLOgUIys2cBf36k/2ZnX50BAjKDbWgfIskb0FvTg5vTo6+PznyCIGg3JALyhY4YQ56VJ4dll82x+odgKDc9Cfm9vCwSYJeHNglvDMQlJvexAgPDyu7HJUjaHlm7bxADyo3j1rQjl8iSNBqElqeFe0rRkaBoNzMWdAJQFBuKAXtOMgEQeOiPY90kdTppxRBzTUiDVgkyc0j7UGZDzP5XyxyYdTEcVDJeaoE7WHwMFNZ4jCT5DzyOahHIBUQNOM82gP1noGhTB3iDz0yICg3eq6on7CK/2J+xGcKCkGZ82YuqD8QlBsI6oUYQZuyQtCMAr3noBOQctux/WtM/SZAPLT1oOvhAj2okkAIGgcIShTYcarT81r6GimCYg6qLFCdoDPJm6+g5pENuFhEfN6MBfW9TKQGgnIzY0GnAEG5mbWgdpj3ORUPQZnz5i0oLhYRnzdrQXG5nfw8CApBRedJFDT2dagY4jPOEyhonAdG3A7EIinPvJkL6g8E5QaCegFBuQlJnGSSoDnoBCAoNwGJ0/o6Oav4KUBQbiCoFxCUGwjqBQTlZihxxL/8Bb0oiqPN40H3NvXALh/p8wYTRwWkWSTFpl/Qs3v/fnJ0c3Jg/7G3uTHvbscT0Z4XJqgDjE+362PoVKc529mc6tzdWI5/t+NpaM+jFpTz+aB9OAq6tzUndjuWToR7r8Xcvt19Lt4M8etz8XubG2O3YwF5QYskB0T3oM2zmZpz8eM9aPv3DIYxoj2PPFHyHHSXvSkn5qAC8gSei6cJHBd0b3Nj7HYsIG/egu7u1blz2BO7HcvIm7Wg6yOgPkBQbmgXSZ6BJIzd8uEFBOWG+EC9VyANAz0oBJWel4Wgge+ifw7qdbtcDQTlpiexqHd6lyBo6NtwXSQ5AUG56U7cPFhLs6BmL1lfICg3MxYUiyT5ebMWFIsk+Xkzn4P+Fosk4XmzXsWvNzzGIkluXhaCxgjEPUl55kFQTyAoN3MV1F5OjyFeet58BZ0IBOVmroJOOQhaQlAIGh8ImnEeBPUEgnIDQb3AbceCEHPPcAQ6BN2czcUqXm4eelBPICg3ENQLCMoNBPUCgnIDQb2AoNzMVdCJQFBuIKgXEJQbCOoFBOUmF0GnvxUImnFeNoIGvBcImnEeBPUEgnIDQb2AoNxAUC8gKDfyBO0MhaDzzBtOpPBztIjdKkLQeealOiw5AAT1QXseBPUEgnIDQb2AoNyQJA7JBEFjoj2PJnHQJqziY6I9T6Kg/r9yGFdBV8eLxdJ+0WzbhW1o0udlIyj9xSJmu8PVz6dlebV4aAXFdtwC8vIRdDqOgl4ZCc+X5fmDfzxt74GIrRBT5glcJEXHYw7a7CJb64jtuAEfToKabTm3gmI7bgF5Ao+D0gS6CHr9wvrZ24O2f89gGCPa8zDEb1kdL5svakExBxWQh0XSho2fax2xHbeAPAi64XJhMJKu6lU8joMKyIOgnkBQbvIQNOTKVAiacV4mggZd2w9BM86DoJ5AUG4gqBcQlJssBJ3nHNSl0ATN920ICBqfXAV1GjbC8wZ93OPT3ivBb2AEnEnyQoWgfk6OCEota+bn4l3bEIKGaOkqKIWqeQvq0oi5ChptDhrFTE9B43kKQb3IahUf08xpgjaQlZACCBqTzrzIUraZJuiaaCUMhW+RpHgO6sTtvEge9hImqCWwhDHAYSY2Nnnh4jgRQdAG7xJGBIKy8ZHLzIZ4glqcSthB0KlFCMpFfGFGocgbLmRXjRZFmKEQlBxKYYYgy/Oq0aIIU1SzoInvTv2kGtda2Ag6cTPugB+lQlwP6v/nz9uj9cCQ51KjgV2o5h7UJcwBv9pNKkySPIcaDTAUgo7iWLmjDalVUMtIjU43FIKOMl63bm2oWlDLQI0GdaG9/wdB6zcyUEUezadfUJPYX4cQ9BbUh5mmNB8naQS1dNSWo59734YhfgphzcdEQkG/TbwqqmOqCkG9iNV8HKQV1OJZu13Ho3Zeuf2fELRF/OYjRoCgFvcq7jxguuvn7v9C0BrK5qNDiqAWp3pe+9k3qEPQfXiajwRRgropWvvXO+2EoDuwNh8BwgS1ODVc/7oIc1BLsubLO885cazh3I+Zzk9QAc2XbZ5f4kDDQNBW2BayZlsDQXfpbxnnk05zEZSovW4BQTsIa+IZCBq/lXqBoN0ENLFmQfULk4uglmlNrFTQ8OqchPa88ESv5jUTVcGC2v1nVsfNZrLOu3zErE5ftOfFSHRXpb5Xyf374+AsqN3m2Gwqd2mFdNntmKA6/dCeFy3RSRXZgjbbHJudD1+9H9/tmLQ6ndGeFzdxTBXZgtZD/LYH7dvtOPW9uSCAkZt/t3cjc9+X7D4H3Uw5u3c7Zvx7d0F7HkmiQ4cW8lgIX/x60NXPp+WVXSV173bMX52zzqNKHPOlJSi5qX6CbjvM7jlokuqcbx5p4oAvW0Hp+9KpPWj3bsfpqnOWefSJ3b6U7Q5UlKDl1WLx4LR/t+PE1Tm3PI7ELl+2SBLUAQjKDVPiLV9aCJqDOgBBuWFL3PGFEwiacR53YglB46I9L0Hip8DrSb2BoBnnJRH0G/0OpG0gaMZ5qQS1BLriCgTNOC+poJZAYRyAoBnnpReUacNxCJpnngRBLYHeDBFXUABIiCToqMDEvz812stXpi4iBA1De/nK1EWEoGFoL1+ZuohcV0kDMAkICkQDQYFoICgQDQQFoiETdHvjp1a2dw5uv1LF5WKxWK7/kaqMZIJe/ek51a8WgnZBzeM6rl+sW1GboD/+8vYX88ycv9s77n73h4f6mrBqMnvba/1JHeb28nJ9s+SDty8WaZqQStDVs8/ny6pojz5fPXy/Ol6O/0R2KBf0av3EOPO0uKtH/1HWg14+L68eV4Iuq770VGUDqhe0fvbB+bIunbIh/sebaoL98L1dKa2LqI1ZCFp1n+ZZR+oEtYU6XxpB0YPmyWYOqrIHvTSTzqvH1y8em7mMvgY0f3lVweyzKR/qFNQUzK7izRx09fRfqgT98VdTmuuXb1/+cf3cHGXUDwQyhwp//0qpoKaM9jioWcWf/nijaxVfo/9oPSAGggLR4Fw8EA0EBaKBoEA0EBSIBoIScnNiH0d80H7tv/9M9W7yBIIScnNyaD/e+7B56etvXqd7PzkCQQmpBS2/PznavARBPYGghDSClhfVIP/1p2qwPzQfD+3Qf/dd4jeXCRCUkLWgX+59sL3oxd13pge9OamEvWiN+6AfCErIRtC77/5ndKzsNIJ+Mb1ne9wH/UBQQlo9aPWhGuLvWEEv7Nq+OEz87vIAghKyFvTsoOow77xe96AY3T2AoIS0VvF1J1r3oNWn1O8sHyAoIa3joEbKrz/deW1k3bwAxoGghDRnkmw3elbNQP9c2XlWHNjX4acbEBSIBoIC0UBQIBoICkQDQYFoICgQDQQFooGgQDQQFIgGggLR/B/8lY0HBMz7XQAAAABJRU5ErkJggg==" /><!-- --></p>
+<p>Moreover, you are not bound to only sunrise and sunset. You can pick
+any of the events supported by the <a href="https://cran.r-project.org/package=suncalc">suncalc</a>
+package:</p>
+<ul>
+<li>solarNoon</li>
+<li>nadir</li>
+<li>sunrise</li>
+<li>sunset</li>
+<li>sunriseEnd</li>
+<li>sunsetStart</li>
+<li>dawn</li>
+<li>dusk</li>
+<li>nauticalDawn</li>
+<li>nauticalDusk</li>
+<li>nightEnd</li>
+<li>night</li>
+<li>goldenHourEnd</li>
+<li>goldenHour</li>
+</ul>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

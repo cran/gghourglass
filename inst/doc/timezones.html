@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>In the zone</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">In the zone</h1>
+
+
+
+<blockquote>
+<p>This vignette presents some vital aspects of time zones when adding
+‘hourglass’ layers to your plot</p>
+</blockquote>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="do">## load required namespaces for this vignette</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="fu">library</span>(gghourglass)</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code></pre></div>
+<p>Whether it’s day or night depends on where you are on the Earth’s
+globe. This is why you need to pass the longitude and latitude when you
+wish to decorate your plot with ribbons indicating night (or day)
+time.</p>
+<p>But which hour of the day is it anyway? Well, that of course depends
+on the time zone that you use as a reference. The <code>?bats</code>
+dataset, included with the <code>gghourglass</code> package, expresses
+the date and time in Coordinated Universal Time (UTC). This makes sense
+when your observations are close to the prime meridian, but not so much
+when you are in a different time zone (such as the Central Time Zone in
+the United States).</p>
+<p>Let’s make this more clear through an example. We start by plotting
+the provided observations of bat call sequences:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="do">## get example data</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="fu">data</span>(bats)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="do">## subset example date to the year 2018</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>bats_sub <span class="ot">&lt;-</span> <span class="fu">subset</span>(bats, <span class="fu">format</span>(RECDATETIME, <span class="st">&quot;%Y&quot;</span>) <span class="sc">==</span> <span class="st">&quot;2019&quot;</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="do">## retrieve monitoring location</span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>lon <span class="ot">&lt;-</span> <span class="fu">attr</span>(bats, <span class="st">&quot;monitoring&quot;</span>)<span class="sc">$</span>longitude[<span class="dv">1</span>]</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>lat <span class="ot">&lt;-</span> <span class="fu">attr</span>(bats, <span class="st">&quot;monitoring&quot;</span>)<span class="sc">$</span>latitude[<span class="dv">1</span>]</span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="do">## plot the data</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a>p <span class="ot">&lt;-</span></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>  <span class="fu">ggplot</span>(bats_sub, <span class="fu">aes</span>(<span class="at">x =</span> RECDATETIME)) <span class="sc">+</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>  </span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a>    <span class="do">## annotate sunset until sunrise</span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>    <span class="fu">annotate_daylight</span>(lon, lat, <span class="fu">c</span>(<span class="st">&quot;sunset&quot;</span>, <span class="st">&quot;sunrise&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>  </span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a>    <span class="do">## annotate dusk until dawn</span></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a>    <span class="fu">annotate_daylight</span>(lon, lat, <span class="fu">c</span>(<span class="st">&quot;dusk&quot;</span>, <span class="st">&quot;dawn&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a>  </span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>    <span class="do">## add hourglass geometry to plot</span></span>
+<span id="cb2-22"><a href="#cb2-22" tabindex="-1"></a>    <span class="fu">geom_hourglass</span>() <span class="sc">+</span></span>
+<span id="cb2-23"><a href="#cb2-23" tabindex="-1"></a>  </span>
+<span id="cb2-24"><a href="#cb2-24" tabindex="-1"></a>    <span class="do">## add informative labels</span></span>
+<span id="cb2-25"><a href="#cb2-25" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">&quot;Date&quot;</span>, <span class="at">y =</span> <span class="st">&quot;Time of day&quot;</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" tabindex="-1"></a>p</span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Note that the <code>geom_hourglass()</code> layer automatically uses
+the time zone as specified by the data (UTC). If you wish to display it
+in a different time zone, such as for instance Central European Time
+(CET), you simply mutate the time zone of the observations with
+<code>lubridate::with_tz()</code>:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>p <span class="sc">%+%</span></span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>  <span class="fu">mutate</span>(bats_sub, <span class="at">RECDATETIME =</span> <span class="fu">with_tz</span>(RECDATETIME, <span class="st">&quot;CET&quot;</span>))</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">#&gt; Warning: x You are displaying a timezone that uses daylight saving time.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">#&gt; It may contain ambiguous time stamps.</span></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">#&gt; i Convert the object to a time zone without daylight time (e.g. &#39;UTC&#39;).</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">#&gt; You can use `lubridate::with_tz()`.</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">#&gt; x You are displaying a timezone that uses daylight saving time.</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">#&gt; It may contain ambiguous time stamps.</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">#&gt; i Convert the object to a time zone without daylight time (e.g. &#39;UTC&#39;).</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">#&gt; You can use `lubridate::with_tz()`.</span></span></code></pre></div>
+<p><img src="data:image/png;base64,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" /><!-- --></p>
+<p>Hold on, why is the ribbon indicating night time jagged? This is
+because CET has summer daylight-saving time which causes the night-time
+to shift one hour.</p>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

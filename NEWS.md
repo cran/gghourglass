@@ -1,3 +1,13 @@
+gghourglass v0.0.2
+-------------
+
+  * Added `annotate_periodstates()`, `uses_dst()`
+    `lunar_phase_polygon()` and `annotate_lunarphase()`
+  * Updated documentation
+  * Added vignettes
+  * Improved test coverage
+  * Some small tweaks
+
 gghourglass v0.0.1
 -------------
 
