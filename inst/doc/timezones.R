@@ -46,7 +46,7 @@ p <-
     labs(x = "Date", y = "Time of day")
 p
 
-## ----plot-cet, fig.width=7, fig.height=3, eval=TRUE---------------------------
+## ----plot-cet, fig.width=7, fig.height=3, eval=TRUE, warning=FALSE------------
 p %+%
   mutate(bats_sub, RECDATETIME = with_tz(RECDATETIME, "CET"))
 

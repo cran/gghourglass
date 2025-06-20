@@ -1,3 +1,9 @@
+gghourglass v0.0.3
+-------------
+
+ * Fixed test to pass on all systems
+ * Fixed compatibility with latest `ggplot2` release
+
 gghourglass v0.0.2
 -------------
 

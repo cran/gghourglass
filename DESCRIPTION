@@ -1,13 +1,14 @@
 Package: gghourglass
 Title: Plot Records per Time of Day
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(person("Pepijn", "de Vries", role = c("aut", "cre"),
     email = "pepijn.devries@outlook.com",
     comment = c(ORCID = "0000-0002-7961-6646")),
     person("Sander", "Lagerveld", role = c("dtc"),
     comment = c(ORCID = "0000-0003-1291-4021")))
-Author: Pepijn de Vries [aut, cre] (<https://orcid.org/0000-0002-7961-6646>),
-  Sander Lagerveld [dtc] (<https://orcid.org/0000-0003-1291-4021>)
+Author: Pepijn de Vries [aut, cre] (ORCID:
+    <https://orcid.org/0000-0002-7961-6646>),
+  Sander Lagerveld [dtc] (ORCID: <https://orcid.org/0000-0003-1291-4021>)
 Description: Splits date and time of day components from
     continuous 'datetime' objects, then plots them using grammar
     of graphics ('ggplot2'). Plots can also be decorated with
@@ -30,7 +31,7 @@ URL: https://pepijn-devries.github.io/gghourglass/,
         https://github.com/pepijn-devries/gghourglass
 BugReports: https://github.com/pepijn-devries/gghourglass/issues
 NeedsCompilation: no
-Packaged: 2025-04-05 12:34:36 UTC; vries171
+Packaged: 2025-06-20 16:28:16 UTC; vries171
 Maintainer: Pepijn de Vries <pepijn.devries@outlook.com>
 Repository: CRAN
-Date/Publication: 2025-04-05 14:20:02 UTC
+Date/Publication: 2025-06-20 21:30:07 UTC
